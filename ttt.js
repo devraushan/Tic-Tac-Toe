@@ -168,7 +168,7 @@ multiLaunchBTN.addEventListener("click",()=>{
     const player2Name=document.getElementById('player2Name').value;
     const player2Symbol=document.getElementById('player2Symbol').value;
 
-    if(player1Symbol!=player2Symbol&&player1Symbol!=""&&player2Symbol!=""){
+    if(player1Name!=""&&player2Name!=""&&player1Name!=player2Name&&player1Symbol!=player2Symbol&&player1Symbol!=""&&player2Symbol!=""){
         const player1 = player(player1Name,player1Symbol);
         const player2 = player(player2Name,player2Symbol);
         gameBoard.gameAddEvent(player1,player2);
@@ -177,6 +177,9 @@ multiLaunchBTN.addEventListener("click",()=>{
     }
     else if(player1Symbol===player2Symbol&&player1Symbol!=""){
         alert("Symbols Must Not Match");
+    }
+    else if(player1Name===""||player2Name===""||player2Name===player1Name){
+        alert("Enter names correctly\nName of players must not be same or void");
     }
     else{
         alert("Please Enter Details Correctly");
