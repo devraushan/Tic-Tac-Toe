@@ -11,6 +11,8 @@ const gameBoard = (function(){
     const gameAddEvent = (player1,player2)=>{
         let lastPlayed;
         let winnerCheck;
+        
+        document.querySelector("#turnIndicator>p").innerText=`${player1.getName()}'s turn`;
         for(let i=0;i<9;i++){
             gameBoard[i].addEventListener("click",()=>{
                 
@@ -43,7 +45,7 @@ const gameBoard = (function(){
                 else if(lastPlayed===2){
                     void(0);
                 }
-                
+                turnChanger(player1,player2,lastPlayed);
                 
             });
 
@@ -125,8 +127,20 @@ const gameBoard = (function(){
         winnerStrip.appendChild(winnerText);
     }
 
+    turnChanger=(player1,player2,lastPlayed)=>{
+        turnIndicator=document.querySelector("#turnIndicator>p");
+        if(lastPlayed===player1.getName()){
+            turnIndicator.innerText=`${player2.getName()}'s turn`;
+        }
+        else if(lastPlayed===player2.getName()){
+            turnIndicator.innerText=`${player1.getName()}'s turn`;
+        }
+        else if(lastPlayed===2){
+            turnIndicator.innerText==="Game Over";
+        }
+    };
 
-    return{gameAddEvent,gameVerdict};
+    return{gameAddEvent};
 })()
 
 const player = (name,symbol) => {
