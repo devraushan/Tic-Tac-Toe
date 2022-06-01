@@ -18,7 +18,9 @@
     align-items: center;
     justify-items: center;
     color: whitesmoke;
-    
+    width: calc(196px/3);
+    height: calc(196px/3);
+
 }
 .winnerStrip{
     position: fixed;
@@ -68,7 +70,6 @@ body{
 
 
 #multiMode{
-
     grid-template-columns: 1fr 1fr;
 }
 .player1,.player2{
@@ -136,4 +137,16 @@ body{
     background-color: rgb(177, 86, 22);
 }
 
+@media screen and (max-width: 768px) {
+    #multiMode{
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+    
+    #multiMode>button{
+        grid-column: 1/2;
+    }
 
+    
+}

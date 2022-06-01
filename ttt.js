@@ -31,7 +31,7 @@ const gameBoard = (function(){
                     }
                     if(tieChecker()){
                         if(lastPlayed===2){
-                            void(o);
+                            void(0);
                         }
                         else{
                             winnerDeclaration('tie');
