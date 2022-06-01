@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="ttt.css">
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <div id="preInterface">
+        <div id="gameModeselect">
+            <label for="gameMode">Select Playing Mode:-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <select name="gameMode" id="gameMode">
+                <option value="" data-generated="  ">---select Mode---</option>
+                <option value="single">Single Player</option>
+                <option value="multi">Multi Player</option>
+            </select>
+            <button id="submitGameMode">Next</button>
+        </div>
+        <div id="singlePlayMode">
+            <!-- <div class="player1">
+                <label for="player1Name">Player 1 Name :-</label>
+                <input type="text" id="player1Name">
+                <label for="player1Symbol">Select Symbol For Player 1</label>
+                <select name="player1Symbol" id="player1Symbol">
+                    <option value="">---select symbol---</option>
+                    <option value="X">X</option>
+                    <option value="O">O</option>
+                </select>
+            </div> -->
+        </div>
+        <div id="multiMode">
+            <div class="player1">
+                <label for="player1Name">Player 1 Name :-</label>
+                <input type="text" id="player1Name">
+                <label for="player1Symbol">Select Symbol For Player 1:-</label>
+                <select name="player1Symbol" id="player1Symbol">
+                    <option value="">---select symbol---&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                    <option value="X">X</option>
+                    <option value="O">O</option>
+                </select>
+            </div>
+            <div class="player2">
+                <label for="player2Name">Player 2 Name :-</label>
+                <input type="text" id="player2Name">
+                <label for="player2Symbol">Select Symbol For Player 2:-</label>
+                <select name="player2Symbol" id="player2Symbol">
+                    <option value="">---select symbol---&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                    <option value="X">X</option>
+                    <option value="O">O</option>
+                </select>
+            </div>
+            <button id="launchGameMulti">Launch</button>
+
+            
+        </div>
+    </div>
+    </div>
+    <div id="gameBoard">
+        <div id="gameBox1"></div>
+        <div id="gameBox2"></div>
+        <div id="gameBox3"></div>
+        <div id="gameBox4"></div>
+        <div id="gameBox5"></div>
+        <div id="gameBox6"></div>
+        <div id="gameBox7"></div>
+        <div id="gameBox8"></div>
+        <div id="gameBox9"></div>
+    </div>
+
+</body>
+<script src="ttt.js"></script>
+</html>

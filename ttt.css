@@ -1,0 +1,139 @@
+#gameBoard{
+    background-color: rebeccapurple;
+    width: 200px;
+    height: 200px;
+    display: grid;
+    grid-template-areas: "a b c"
+    "d e f"
+    "g h i";
+    grid-gap: 2px;
+    align-self: center;
+    justify-self: center;
+
+
+}
+#gameBoard>div{
+    background-color: blue;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    color: whitesmoke;
+    
+}
+.winnerStrip{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    display: grid;
+
+    align-items: center;
+
+}
+.winnerStrip>p{
+    background-color: red;
+    color: aliceblue;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    align-items: center;
+    /* align-items: center; */
+}
+#preInterface{
+    display: grid;
+}
+
+#gameModeselect{
+    
+    display: grid;
+    /* align-items: center;
+    justify-items: center; */
+    justify-self: center;
+    align-self: center;
+    grid-gap: 10px;
+    border: solid greenyellow 0.5px;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+
+
+#multiMode{
+
+    grid-template-columns: 1fr 1fr;
+}
+.player1,.player2{
+    display: grid;
+    padding: min(10px,2%);
+    justify-self: center;
+    border: solid green 1px;
+    border-radius: 5px;
+    align-items: center;
+    justify-items: left;
+    grid-gap: 0.5em;
+}
+.player1>input,.player2>input{
+    outline: none;
+    border: solid greenyellow 0.5px;
+    border-radius: 5px;
+    color: green;
+}
+.player1>input:focus,.player2>input:focus{
+    border-color: green;
+}
+.player1>select,.player2>select,#gameModeselect>select{
+    appearance: none;
+    background-image: url("icon/double-arrow-down-14228.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-origin: content-box;
+    background-color: transparent;
+    background-size: contain;
+    padding: 3px 5px;
+    outline: none;
+    border: solid greenyellow 0.5px;
+    border-radius: 5px;
+    color: green;
+
+}
+
+
+.player1>select:active,.player2>select:active,#gameModeselect>select:active{
+     background-color: white;
+     border: 1px solid blueviolet;
+}
+
+#gameModeselect>button{
+    padding: 5px 10px;
+    background-color: chocolate;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    color: white;
+}
+
+#multiMode>button{
+    grid-column: 1/3;
+    justify-self: center;
+    align-self: center;
+    padding: 5px 10px;
+    background-color: chocolate;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.1rem;
+    color: white;
+}
+#multiMode>button:hover,#gameModeselect>button:hover{
+    background-color: rgb(177, 86, 22);
+}
+
+
